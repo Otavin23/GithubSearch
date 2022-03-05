@@ -7,20 +7,30 @@ export const bgFundo = styled.main`
 export const Container = styled.div`
     margin-top: 1.5rem;
     height: 75%;
-    background-color:#1F2A48;
+    background-color: ${props => props.theme.colors.fundo};
+    transition: all 0.6s ease-out;
     display: flex;
     align-items:center ;
     justify-content:center ;
-    box-shadow: 0px 2px 14px #1f2a48;
+    box-shadow: 0px 5px 20px ${props => props.theme.colors.shadow};
+    #error{
+        color: ${props => props.theme.colors.text};
+        font-size: 20px;
+    }
 `
 export const Context = styled.div` 
     width: 90%;
     height: 90%;
     display: flex;
+    #error{
+        color: wheat;
+        font-size: 20px;
+    }
     .iconBanner{
         width: 30%;
         img{
             width: 70%;
+            border-radius: 50%;
         }
     }
 `  
@@ -31,12 +41,12 @@ export const Information = styled.div`
         justify-content: space-between;
         align-items: center;
         h2{
-            color: #e9eff9;
+            color: ${props => props.theme.colors.text};
             font-weight: 600;
             font-size: 22px;
         }
         p{
-            color: #7a839d;
+            color: ${props => props.theme.colors.textSegundario};
             font-size: 15px;
             font-weight: 600;
             letter-spacing:1px;
@@ -52,7 +62,7 @@ export const Information = styled.div`
             margin-bottom: 1rem;
         }
         #bio{
-            color: #5A637A;
+            color: ${props => props.theme.colors.text};
             letter-spacing:2px;
             font-size: 14px;
             margin-bottom: 2rem;
@@ -60,7 +70,7 @@ export const Information = styled.div`
     }
 `
 export const CardProfile = styled.div`
-    background-color: #141D2E;
+    background-color: ${props => props.theme.colors.cardBg};
     width: 100%;
     height: 6rem;
     display: flex;
@@ -74,27 +84,27 @@ export const CardProfile = styled.div`
             font-weight:600 ;
         }
         p{
-            color: #b6bdc8;
+            color: ${props => props.theme.colors.textCard};
             font-weight: 800 ;
             font-size: 20px;
         }
     }
 `
 export const LocationProfile = styled.div`
-    width: 90%;
+    width: 100%;
     height: 5rem ;
     margin-top: 1rem;
     display: flex;
     justify-content:space-between ;
     div{
-        width: 30%;
+        width: 40%;
         height:100% ;
     nav{
         ul{
             list-style: none;
             li{
                 margin-top: 0.5rem;
-                color: #b5bcce;
+                color: ${props => props.theme.colors.color};
             }
         }
     }

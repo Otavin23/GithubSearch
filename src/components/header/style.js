@@ -6,24 +6,22 @@ export const Header = styled.header`
   display: flex;
   align-items: flex-start;
   justify-content:space-between ;
-  background-color: #141c2f;
-
+  background-color: ${props => props.theme.colors.bodyColor};
 `
-
 export const Logo = styled.div`
     cursor: pointer;
   h1 {
     font-weight: 700;
     font-size: 20px;
     letter-spacing: 1px;
-    color: hsl(0, 0%, 98%);
+    color: ${props => props.theme.colors.color};
   }
 `
 
 export const ThemeButton = styled.button`
     background: transparent;
     border: none;
-    color: hsl(0, 0%, 98%);
+    color: ${props => props.theme.colors.color};
     text-align: center;
     display: flex;
     align-items:center ;

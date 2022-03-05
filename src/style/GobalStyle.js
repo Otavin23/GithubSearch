@@ -11,11 +11,12 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 400;
     }
     body {
-        background-color: #141C2F;
+        background-color:${ props => props.theme.colors.bodyColor};
         display: flex;
         align-items: center;
         justify-content:center ;
         height: 100vh;
+
       }
     code {
 }
